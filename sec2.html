@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffee</title>
+
+    <!-- SWIPER -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+
+    <!-- Font Awesome CDN Link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <!-- Custom CSS File Link  -->
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="header" style="display: none;">
+        <div id="menu-btn" class="fas fa-bars"></div>
+
+        <a href="#" class="logo">coffee <i class="fas fa-mug-hot"></i></a>
+
+        <nav class="navbar">
+            <a href="#home">home</a>
+            <a href="#about">about</a>
+            <a href="#menu">menu</a>
+            <a href="#review">review</a>
+            <a href="#book">book</a>
+        </nav>
+
+        <a href="#" class="btn">book a table</a>
+    </header>
+
+    <!-- MENU -->
+    <section class="menu" id="menu">
+
+        <div class="box-container">
+            <span id="tork" href="#" class="box" >
+                <img id="tork_img" src="image/menu-1.png" alt="" >
+                <div class="content" onclick="tork_add()">
+                    <h3 style="direction: rtl; float: right;" >قهوه ترک</h3>
+                    <p></p>
+                    <p style="direction: rtl; float: right;">از بهترین قهوه های جهان>از بهترین قهوه های جهان >از بهترین قهوه های جهان>از بهترین قهوه های جهان </p>
+                    <p style="direction: rtl; float: right;">  <span> 50 </span><span>هزار تومان </span> <span style="margin-right: 100px;"><a>تعداد</a></span> <span><input style="text-align: center; font-size: 1.3rem;" type="text" name="" id="tork_inp" value=""></span></p>
+                </div>
+            </span>
+
+            <a href="#" class="box">
+                <img src="image/menu-2.png" alt="" >
+                <div class="content">
+                    <h3 style="direction: rtl; float: right;" >قهوه لر</h3>
+                    <p></p>
+                    <p style="direction: rtl; float: right;">از بهترین قهوه های جهان>از بهترین قهوه های جهان >از بهترین قهوه های جهان>از بهترین قهوه های جهان </p>
+                    <p style="direction: rtl; float: right;"> </span> <span>50</span><span > هزار تومان </p>
+                    
+                </div>
+            </a>
+
+            <a href="#" class="box">
+                <img src="image/menu-3.png" alt="" >
+                <div class="content">
+                    <h3 style="direction: rtl; float: right;" >قهوه عرب</h3>
+                    <p></p>
+                    <p style="direction: rtl; float: right;">از بهترین قهوه های جهان>از بهترین قهوه های جهان >از بهترین قهوه های جهان>از بهترین قهوه های جهان </p>
+                    <p style="direction: rtl; float: right;"> </span> <span>50</span><span > هزار تومان </p>
+                    
+                </div>
+            </a>
+
+            <a href="#" class="box">
+                <img src="image/menu-4.png" alt="" >
+                <div class="content">
+                    <h3 style="direction: rtl; float: right;" >قهوه فارس</h3>
+                    <p></p>
+                    <p style="direction: rtl; float: right;">از بهترین قهوه های جهان>از بهترین قهوه های جهان >از بهترین قهوه های جهان>از بهترین قهوه های جهان </p>
+                    <p style="direction: rtl; float: right;"> </span> <span>50</span><span > هزار تومان </p>
+                    
+                </div>
+            </a>
+
+            <a href="#" class="box">
+                <img src="image/menu-5.png" alt="" >
+                <div class="content">
+                    <h3 style="direction: rtl; float: right;" >قهوه </h3>
+                    <p></p>
+                    <p style="direction: rtl; float: right;">از بهترین قهوه های جهان>از بهترین قهوه های جهان >از بهترین قهوه های جهان>از بهترین قهوه های جهان </p>
+                    <p style="direction: rtl; float: right;"> </span> <span>50</span><span > هزار تومان </p>
+                    
+                </div>
+            </a>
+
+            <a href="#" class="box">
+                <img src="image/menu-6.png" alt="" >
+                <div class="content">
+                    <h3 style="direction: rtl; float: right;" >قهوه چایی</h3>
+                    <p></p>
+                    <p style="direction: rtl; float: right;">از بهترین قهوه های جهان>از بهترین قهوه های جهان >از بهترین قهوه های جهان>از بهترین قهوه های جهان </p>
+                    <p style="direction: rtl; float: right;"> </span> <span>50</span><span > هزار تومان </p>
+                    
+                </div>
+            </a>
+        </div>
+        <a href="sec3.html"><input class="button-24" type="button" value="ثبت سفارش" style="margin-left: 45%; margin-top: 30px; margin-bottom: 50px;"></a>
+    </section>
+    
+
+
+    <!-- SWIPER -->
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+
+    <!-- Custom JS File Link  -->
+    <script src="js/script.js"></script>
+
+    <script>
+        var tedad = ['یک عدد', 'دو عدد', 'سه عدد']
+        var counter_tork =0
+
+        
+        function tork_add() {
+            if (counter_tork>3) {
+                document.getElementById('tork_inp').value = 'بیش  از حد مجاز'
+            } else {
+                globalThis.counter_tork+=1
+                if (counter_tork>3) {
+                    document.getElementById('tork_inp').value = 'بیش  از حد مجاز'
+                } else{
+                    document.getElementById('tork_inp').value = tedad[counter_tork-1]
+                }
+      
+            }
+            document.getElementById('tork_img').src = "image/menu-12.png"
+            document.getElementById('tork_img').onclick = function () {
+                globalThis.counter_tork-=1;
+                document.getElementById('tork_inp').value = tedad[counter_tork-1]
+                if (counter_tork==0) {
+                    document.getElementById('tork_img').src = "image/menu-1.png"
+                    document.getElementById('tork_inp').value =''
+                }
+
+            };
+        }
+        
+    </script>
+
+</body>
+
+</html>
